@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	body{
+		height: 2000px;
+	}
+</style>
+<body>
+
+	<script>
+		/*主要用于自定义属性：
+		box.setAttribute('')设置属性
+		box.getAttribute('')获取属性
+		box.onscroll = function(){
+			console.log(box.scrollTop) 输出 超出上面的距离；
+			box.scrollLeft 算出超出左边的距离；
+		}
+		*/
+		window.onload=function(){
+			window.onscroll=function(){
+				console.log(document.body.scrollTop)
+				console.log(document.documentElement.scrollTop)
+			}
+		}
+	</script>
+</body>
+</html>
