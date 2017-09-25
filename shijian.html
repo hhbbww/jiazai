@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	.box{
+		width: 200px;
+		height: 200px;
+		background: red;
+		position: absolute;
+		left: 0;
+		top: 0;
+		cursor: pointer;
+	}
+</style>
+<body>
+	<div class="box"></div>
+</body>
+<script>
+window.addEventListener('load',function(){
+	let box=document.querySelector('.box');
+
+	box.addEventListener('mousedown',function(e){
+		let ox = e.offsetX,oy = e.offsetY;
+		document.addEventListener('mousemove',fn);
+		box.addEventListener('mouseup',function(){
+			document.removeEventListener('mousemove',fn)
+		})
+		function fn(e){
+			let lefts=e.clientX-ox, tops =e.clientY-oy;
+			box.style.left =lefts+'px';
+			box.style.top=tops+'px';
+		}
+	})
+})
+</script>
+</html>

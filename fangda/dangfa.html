@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	.box{
+		width: 384px;
+		height: 240px;
+		border: 1px solid #999;
+		float: left;
+
+		position: relative;
+	}
+	.box>img{
+		width: 100%;
+		height: 100%;
+	}
+	.box .zhe{
+		width: 192px;
+		height: 120px;
+		background: rgba(0, 0, 0, 0.4);
+		position: absolute;
+		left: 0;
+		top: 0;
+		opacity: 0;
+	}
+	.boxd{
+		width:  384px;
+		height: 240px;
+		border: 1px solid #999;
+		overflow: hidden;
+		position: relative;
+	}
+	.boxd>img{
+		width: 768px;
+		height: 480px;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	.opc{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 999;
+	}
+</style>
+<body>
+	<div class="box">
+		<img src="img/554280.jpg" alt="">
+		<div class="zhe"></div>
+		<div class="opc"></div>
+	</div>
+	<div class="boxd">
+		<img src="img/554280.jpg" alt="">
+	</div>
+</body>
+<script src="fangda.js"></script>
+</html>
